@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ms-llm-summarizer
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: mistral
+      init:
+        pull-model-strategy: when_missing
+        timeout: 5m
+        max-retries: 1
